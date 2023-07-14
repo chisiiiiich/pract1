@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Календарик</title>
+  </head>
+  <body>
+<header  class="fixed-top p-4" style="background-color: rgba(90, 117, 200, 0.973);"></header>
+
+<div class="container">
+  <div class="left">
+    <div class="calendar">
+      <div class="month">
+        <i class="fas fa-angle-left prev"></i>
+        <div class="date"></div>
+        <i class="fas fa-angle-right next"></i>
+      </div>
+      <div class="weekdays">
+        <div>Пн</div>
+        <div>Вт</div>
+        <div>Ср</div>
+        <div>Чт</div>
+        <div>Пт</div>
+        <div>Сб</div>
+        <div>Вс</div>
+      </div>
+      <div class="days"></div>
+      <div class="goto-today">
+        <div class="goto">
+          <input type="text" placeholder="mm/yyyy" class="date-input" />
+          <button class="goto-btn">Перейти</button>
+        </div>
+        <button class="today-btn">Вернуться</button>
+      </div>
+    </div>
+  </div>
+  <div class="add-events">
+    <div class="today-date">
+      <div class="event-day"></div>
+      <div class="event-date"></div>
+    </div>
+    <div class="events"></div>
+    <div class="add-event-wrapper">
+      <div class="add-event-header">
+        <div class="title">Создайте заметку</div>
+        <i class="fas fa-times close"></i>
+      </div>
+      <div class="add-event-body">
+        <div class="add-event-input">
+          <input type="text" placeholder="Имя события" class="event-name" />
+        </div>
+        
+        <div class="add-event-input">
+          <input
+            type="text"
+            placeholder="Время начала"
+            class="event-time-from"
+          />
+        </div>
+        <div class="add-event-input">
+          <input
+            type="text"
+            placeholder="Время окончания"
+            class="event-time-to"
+          />
+        </div>
+      </div>
+      <div class="add-event-footer">
+        <button class="add-event-btn">Создать</button>
+      </div>
+    </div>
+  </div>
+  <button class="add-event">
+    Создать событие
+  </button>
+</div>
+
+<footer class=" position-absolute bg-dark text-center text-white">
+    <div class="fixed-bottom text-center p-3" style="background-color:rgba(90, 117, 200, 0.973);">
+   
+      <a class="text-white" href="https://vk.com/pokkrovskaya">Olya</a>
+    </div>
+  </footer>
+  <script src="./days.js"></script>
+ </body>
+</html>
